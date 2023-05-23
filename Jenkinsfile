@@ -8,17 +8,17 @@ node{
     stage('checkout') {
            checkout scm
   }  
-    stage('ssh1'){
+     stage('step1'){
   sshPut remote: remote, from: 'hasee99.sh', into: '/home/opc'
  }
-  stage('ssh2'){
- sshCommand remote: remote, command: "sudo sh /home/opc/hasee99.sh"
+  stage('step2'){
+     sshScript remote: remote, script: "hasee99.sh"
  }
-  stage('ssh3'){
+  stage('step2'){
  sshCommand remote: remote, command: "pwd"
  }
-  stage('ssh4'){
- sshCommand remote: remote, command: "rm -rf /home/opc/hasee99.sh"
+  stage('step2'){
+ sshRemove remote: remote, path: "/home/opc/hasee99.sh"
  }
 }
 
