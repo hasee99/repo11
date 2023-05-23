@@ -7,7 +7,7 @@ node{
   remote.allowAnyHosts = true
     stage('checkout') {
            checkout scm
-  }  
+  }   
      stage('step1'){
   sshPut remote: remote, from: 'hasee99.sh', into: '/home/opc'
  }
