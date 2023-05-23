@@ -18,7 +18,7 @@ node{
  sshCommand remote: remote, command: "pwd"
  }
   stage('ssh4'){
- sshCommand remote: remote, command: "mv /home/opc/hasee99.sh /home/opc/hasee99/"
+ sshCommand remote: remote, command: "rm -rf /home/opc/hasee99.sh"
  }
 }
 
