@@ -14,10 +14,10 @@ node{
   stage('step2'){
      sshScript remote: remote, script: "hasee99.sh"
  }
-  stage('step2'){
+  stage('step3'){
  sshCommand remote: remote, command: "pwd"
  }
-  stage('step3'){
+  stage('step4'){
  sshRemove remote: remote, path: "/home/opc/hasee99.sh"
  }
 }
